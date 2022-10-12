@@ -2,5 +2,5 @@
 
 ## vite
 ## react
-## echart
-## ts
+## echarts
+## type
