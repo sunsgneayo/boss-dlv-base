@@ -4,9 +4,11 @@ import App from './App'
 import './index.css'
 import EchartsTest from "./E";
 import EchartsColumnarTest from "./T";
+import Timer from "./A";
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
+      <Timer/>
       <EchartsColumnarTest></EchartsColumnarTest>
       <div style={{ height:50 } }/>
       <EchartsTest />
