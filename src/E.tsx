@@ -32,13 +32,25 @@ class EchartsTest extends Component {
             },
 
             tooltip: {
+                transitionDuration: 0,
+                confine:true,
                 trigger: 'axis',
                 axisPointer: {
                     type: 'cross',
                     label: {
                         backgroundColor: '#6a7985'
                     }
-                }
+                },
+                // formatter: function(params:any) {
+                //     console.log("0000000000000")
+                //     console.log(params[0]["seriesName"], params[0]["axisValue"],params[0]["data"])
+                //     console.log(params[1]["seriesName"], params[1]["axisValue"],params[1]["data"])
+                //     console.log(params[2]["seriesName"], params[2]["axisValue"],params[2]["data"])
+                //     console.log(11111111)
+                //     var html = `<div class='specialLook' >${params[0]["data"]}</div>
+                //    <div class='addSearch'>${params[0]["seriesName"]}</div>`;
+                //     return html;
+                // }
             },
             legend: [{
                 textStyle: {
@@ -277,7 +289,22 @@ class EchartsTest extends Component {
         };
 
         option && myChart.setOption(option);
+
+
+        myChart.on('mouseover' ,  'xAxis.category' , (params:any ) =>{
+            console.log(params)
+        });
+
+        myChart.on('legendselectchanged', function (params) {
+            console.log(params);
+        });
+        // myChart.on('mouseover', function (params) {
+        //     console.log(params);
+        // });
+
+
     }
+
 
     render() {
         return (
