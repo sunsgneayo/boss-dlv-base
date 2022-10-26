@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 
 import * as echarts from 'echarts';
+import html2canvas from 'html2canvas';
+
 
 class EchartsColumnarTest extends Component {
     componentDidMount() {
@@ -17,16 +19,16 @@ class EchartsColumnarTest extends Component {
 
         option = {
             toolbox: {
-                show : true,
+                show: true,
                 right: 23,
-                feature : {
+                feature: {
                     /* line是折线图，bar是柱形图*/
                     magicType: {
                         show: true,
                         type: ['line', 'bar'],
-                        title:{
-                            line:"切换为折线图",
-                            bar:"切换为柱状图"
+                        title: {
+                            line: "切换为折线图",
+                            bar: "切换为柱状图"
                         },
                         // icon:{
                         //     bar: "image://src/assets/bar-2.png",
@@ -61,7 +63,7 @@ class EchartsColumnarTest extends Component {
                 {
                     data: [120, 200, 150, 80, 70, 110, 130],
                     type: 'bar',
-                    barWidth:10,
+                    barWidth: 10,
                     itemStyle: {
                         normal: {
                             //这里是颜色
@@ -120,7 +122,7 @@ class EchartsColumnarTest extends Component {
                 {
                     data: [60, 65, 94, 25, 80, 45, 36],
                     type: 'bar',
-                    barWidth:10,
+                    barWidth: 10,
                     itemStyle: {
                         normal: {
                             //这里是颜色
@@ -148,10 +150,38 @@ class EchartsColumnarTest extends Component {
         option && myChart.setOption(option);
     }
 
+
     render() {
+        const creatImg = () => { // 绑定在某个点击事件
+            html2canvas(document.getElementById('aphoto') as HTMLElement, {
+                // aphoto为被截图节点id
+                allowTaint: false,
+                useCORS: true, // 支持跨域图片的截取，不然图片截取不出来
+                // 图片服务器配置 Access-Control-Allow-Origin: *
+            }).then(canvas => {
+                const link = document.createElement('a'); // 建立一个超连接对象实例
+                const event = new MouseEvent('click'); // 建立一个鼠标事件的实例
+                link.download = 'img.png'; // 设置要下载的图片的名称
+                link.href = canvas.toDataURL(); // 将图片的URL设置到超连接的href中
+                link.dispatchEvent(event); // 触发超连接的点击事件
+            })
+        }
+
+
         return (
-            <div id="EchartsColumnarTest"
-                 style={{width: 608, height: 213, overflow: "hidden", background: '#000', borderRadius: 14}}></div>
+            <>
+                <div id="EchartsColumnarTest"
+                     style={{width: 608, height: 213, overflow: "hidden", background: '#000', borderRadius: 14}}>
+
+                </div>
+
+                <div id='aphoto'>
+                    abc
+                </div>
+                <div onClick={creatImg}>点击我截图</div>
+            </>
+
+
         );
     }
 }
