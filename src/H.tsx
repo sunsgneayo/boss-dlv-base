@@ -8,9 +8,10 @@ import { Button } from 'antd';
 
 
 export default function Example() {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
 
     return (
+
         <div>
             <p>You clicked {count} times</p>
 
