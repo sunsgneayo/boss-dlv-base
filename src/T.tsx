@@ -44,6 +44,7 @@ class EchartsColumnarTest extends Component {
                 containLabel: true
             },
             xAxis: {
+                boundaryGap:false,
                 type: 'category',
                 data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
             },
@@ -62,7 +63,7 @@ class EchartsColumnarTest extends Component {
             series: [
                 {
                     data: [120, 200, 150, 80, 70, 110, 130],
-                    type: 'bar',
+                    type: 'line',
                     barWidth: 10,
                     itemStyle: {
                         normal: {
@@ -76,7 +77,7 @@ class EchartsColumnarTest extends Component {
                         color: '#42CDBC'
                     },
                     symbol: 'circle',
-                    showSymbol: false,
+                    showSymbol: true,
                     areaStyle: {
                         opacity: 0.5,
                         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
@@ -121,7 +122,7 @@ class EchartsColumnarTest extends Component {
                 },
                 {
                     data: [60, 65, 94, 25, 80, 45, 36],
-                    type: 'bar',
+                    type: 'line',
                     barWidth: 10,
                     itemStyle: {
                         normal: {
