@@ -119,7 +119,14 @@ class EchartsTest extends Component {
             yAxis: [
                 {
                     type: 'log',
+                    axisLabel: {
+                        formatter: function (value:number) {
+                            return value === 0.1 ? 0 : value;
+                        }
+                    },
+
                 },
+
             ],
             series: [
                 {
@@ -155,7 +162,7 @@ class EchartsTest extends Component {
                     emphasis: {
                         focus: 'series'
                     },
-                    data: [140, 232, 101, 264, 90, 340, 250,140, 232, 101, 264, 90, 340, 250,140, 232, 101, 264, 90, 340, 250]
+                    data: [0.1, 232, 101, 264, 90, 340, 250,140, 232, 101, 264, 90, 340, 250,140, 232, 101, 264, 90, 340, 250]
                 },
                 {
                     name: '单日支出',

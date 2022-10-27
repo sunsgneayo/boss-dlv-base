@@ -11,14 +11,14 @@ import Example from "./H";
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
 
-      {/*<div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/>*/}
-      {/*<Timer/>*/}
-      {/*<EchartsColumnarTest></EchartsColumnarTest>*/}
-      {/*<div style={{ height:50 } }/>*/}
-      {/*<EchartsTest />*/}
-      {/*<Form>*/}
+      <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/>
+      <Timer/>
+      <EchartsColumnarTest></EchartsColumnarTest>
+      <div style={{ height:50 } }/>
+      <EchartsTest />
+      <Form>
 
-      {/*</Form>*/}
+      </Form>
 
       <Example></Example>
 
