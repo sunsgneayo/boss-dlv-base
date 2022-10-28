@@ -4,6 +4,7 @@ import React ,{Component} from "react";
 
 import  "./Apple.scss"
 
+
 interface IState {
     seconds:number
 }
@@ -29,6 +30,22 @@ class Apple2 extends Component<{}, IState, unknown> {
     }
 
     render() {
+        // const client  = mqtt.connect('mqtt://test.mosquitto.org')
+        //
+        // client.on('connect', function () {
+        //     client.subscribe('presence', function (err) {
+        //         if (!err) {
+        //             client.publish('presence', 'Hello mqtt')
+        //         }
+        //     })
+        // })
+        //
+        // client.on('message', function (topic, message) {
+        //     // message is Buffer
+        //     console.log(message.toString())
+        //     client.end()
+        // })
+
         return (
             <div>
                 <div className="g-wrap2">
