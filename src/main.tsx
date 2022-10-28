@@ -8,6 +8,7 @@ import Timer from "./A";
 import Form from "./F";
 // import 'antd/dist/antd.css';
 import Example from "./H";
+import Apple from "./Apple";
 
 // import Apple from "./Apple"
 
@@ -15,18 +16,19 @@ import Example from "./H";
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
 
-      <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/>
-      <Timer/>
-      <EchartsColumnarTest></EchartsColumnarTest>
-      <div style={{ height:50 } }/>
-      <EchartsTest />
-      <Form>
+      {/*<div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/> <div style={{ height:50 } }/>*/}
+      {/*<Timer/>*/}
+      {/*<EchartsColumnarTest></EchartsColumnarTest>*/}
+      {/*<div style={{ height:50 } }/>*/}
+      {/*<EchartsTest />*/}
+      {/*<Form>*/}
 
-      </Form>
+      {/*</Form>*/}
 
 
-      <Example></Example>
+      {/*<Example></Example>*/}
 
+        <Apple></Apple>
   </React.StrictMode>
 )
 
