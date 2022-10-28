@@ -10,7 +10,7 @@ import Form from "./F";
 import Example from "./H";
 import Apple from "./Apple";
 
-// import Apple from "./Apple"
+import Apple2 from "./Apple2"
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -28,7 +28,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
       {/*<Example></Example>*/}
 
-        <Apple></Apple>
+        {/*<Apple></Apple>*/}
+        <Apple2></Apple2>
   </React.StrictMode>
 )
 
