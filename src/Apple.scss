@@ -1,0 +1,34 @@
+
+
+
+.g-wrap {
+    margin: auto;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+
+
+}
+p {
+    position: relative;
+    width: 800px;
+    font-size: 40px;
+    color: transparent;
+    margin: auto;
+    line-height: 1.5;
+    padding: 20px;
+    background: linear-gradient(-4deg, transparent, transparent 25%, #ffb6ff, #b344ff,transparent 75%, transparent);
+    background-clip: content-box;
+    background-size: 100% 400%;
+    background-position: center 0;
+    animation: textScroll 6s infinite linear alternate;
+}
+
+@keyframes textScroll {
+    100% {
+        background-position: center 100%;
+    }
+}
+
+
